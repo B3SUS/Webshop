@@ -37,31 +37,11 @@ p{
     color: white;
     margin: 1.098vw 0  1.464vw 0;
 }
-button.normal{
-    font-size: 1.025vw;
-    font-weight: 43.92vw;
-    padding: 1.098vw 2.196vw;
-    color: #000;
-    background-color: #fff;
-    border-radius: 0.293vw;
-    cursor: pointer;
-    border: none;
-    outline: none;
-    transition: 0.2s;
-}
-button.white{
-    font-size: 0.952vw;
-    font-weight: 43.923vw;
-    padding: 0.805vw 1.317vw;
-    color: #fff;
-    background-color: transparent;
-    cursor: pointer;
-    border: 0.0732vw solid #fff;
-    outline: none;
-    transition: 0.2s;
-}
 #hero{
-    background-image: url("img/hero.jpg");
+    background: url("img/hero.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     background-size: cover;
 }
 #header{
@@ -72,12 +52,10 @@ button.white{
     left: 0;
 }
 #navbar{
+    height: 103px;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-bottom-width: 0;
-    border-bottom-style: solid;
-    border-bottom-color: rgba(0,0,0,0);
 }
 #navbar li{
     list-style: none;
@@ -85,13 +63,10 @@ button.white{
 }
 #navbar li a{
     text-decoration: none;
-    color: rgb(255, 255, 255);
+    color: white;
     padding: 20px;
 }
-#hero-section button{
-    background-color: #088178;
-    color:#fff;
-    white-space: nowrap;
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
+#hero-section{
+    height: 703px;
 }
+
