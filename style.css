@@ -5,6 +5,45 @@
     box-sizing: border-box;
     font-family: 'Spartan', sans-serif;
 }
+#cover{
+    background: rgba(0, 0, 0, 0.3);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 0;
+}
+button.normal{
+    font-size: 1vw;
+    font-weight: 43.92vw;
+    padding: 0.805vw 1.317vw;
+    color: #000;
+    background-color: #fff;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    transition: 0.2s;
+}
+button.normal:hover{
+    color:white;
+    background: black;
+}
+button.white{
+    font-size: 1vw;
+    font-weight: 43.923vw;
+    padding: 0.805vw 1.317vw;
+    color: #fff;
+    background-color: transparent;
+    cursor: pointer;
+    border: 0.0732vw solid #fff;
+    outline: none;
+    transition: 0.2s;
+}
+button.white:hover{
+    color:black;
+    background: white;
+}
 h1{
     font-size: 3.66vw;
     line-height: 8.33vh;
@@ -16,46 +55,52 @@ h2{
     line-height: 5.825vh;
     color: white;
 }
-
+h3{
+    color: white;
+    font-size: 1.3vw;
+    line-height: 4vh;
+}
 h4{
     font-size: 1.46vw;
     color: white;
 }
-
-h3{
-    color: white;
-}
-
 h6{
     font-weight: 51.24vw;
     font-size: 0.878vw;
     color: white;
 }
-
 p{
     font-size: 1.171vw;
     color: white;
     margin: 1.098vw 0  1.464vw 0;
 }
 #hero{
-    background: url("img/hero.jpg") no-repeat center center fixed;
+    background:  url("img/hero.jpg") no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    height: 884px;
+
 }
 #header{
     display: flex;
     align-items: center;
-    padding: 30px 30px;
+    padding: 10px 45px 0 45px;
     top: 0;
     left: 0;
 }
 #navbar{
     height: 103px;
+    width: 1012px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: left;
+    z-index: 2;
+}
+#navbar .firstlogo{
+    height: 46px;
+    width: 140px;
 }
 #navbar li{
     list-style: none;
@@ -66,7 +111,40 @@ p{
     color: white;
     padding: 20px;
 }
+#navbar li a:hover,
+#cart-bar li a:hover{
+    color: black;
+}
+#cart-bar{
+    width: 801px;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    z-index: 2;
+}
+#cart-bar li{
+    list-style: none;
+    position: relative;
+}
+#cart-bar li a{
+    text-decoration: none;
+    color: white;
+    padding: 20px;
+}
 #hero-section{
-    height: 703px;
+    flex-direction: column;
+    padding: 200px 300px;
+    align-items: flex-start;
+    justify-content: center;
+    z-index: 2;
+}
+#hero-section h1{
+    padding-bottom: 20px;
+}
+#hero-section h3{
+    padding-bottom: 40px;
+}
+#hero-section button{
+    margin-right: 15px;
 }
 
