@@ -5,15 +5,6 @@
     box-sizing: border-box;
     font-family: 'Spartan', sans-serif;
 }
-#cover{
-    background: rgba(0, 0, 0, 0.3);
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: 0;
-}
 button.normal{
     font-size: 1vw;
     font-weight: 43.92vw;
@@ -53,7 +44,7 @@ h1{
 h2{
     font-size: 2.396vw;
     line-height: 5.825vh;
-    color: white;
+    color: black;
 }
 h3{
     color: white;
@@ -65,14 +56,29 @@ h4{
     color: white;
 }
 h6{
-    font-weight: 51.24vw;
-    font-size: 0.878vw;
-    color: white;
+    color: black;
+}
+h6.gray-text{
+    color: gray;
 }
 p{
     font-size: 1.171vw;
     color: white;
     margin: 1.098vw 0  1.464vw 0;
+}
+#cover{
+    background: rgba(0, 0, 0, 0.3);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 120px;
+    z-index: 0;
+}
+#cover2{
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 0;
 }
 #hero{
     background:  url("img/hero.jpg") no-repeat center center fixed;
@@ -89,6 +95,7 @@ p{
     padding: 10px 45px 0 45px;
     top: 0;
     left: 0;
+    z-index: 2;
 }
 #navbar{
     height: 103px;
@@ -96,7 +103,6 @@ p{
     display: flex;
     align-items: center;
     justify-content: left;
-    z-index: 2;
 }
 #navbar .firstlogo{
     height: 46px;
@@ -120,7 +126,6 @@ p{
     display: flex;
     align-items: center;
     justify-content: right;
-    z-index: 2;
 }
 #cart-bar li{
     list-style: none;
@@ -147,4 +152,49 @@ p{
 #hero-section button{
     margin-right: 15px;
 }
-
+#products-section{
+    text-align: center;
+    background: #f5f7f9;
+    padding-top: 100px;
+}
+#products-section .featured{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#products-section h2{
+    margin-bottom: 20px;
+}
+#products-section hr{
+    width: 100px;
+    border-top: 1px solid blue;
+    margin: 0 auto;
+}
+#products-section .products-container{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 100px 250px;
+}
+#products-section .product-box{
+    text-align: left;
+    width: 250px;
+    height: 405px;
+}
+#products-section .product-box img{
+    height: 250px;
+    width: 250px;
+}
+#products-section .product-box .desc{
+    text-align: start;
+    padding: 0.732vw 0;
+}
+#products-section .product-box h5{
+    padding-top: 10px;
+}
+#products-section .product-box h6{
+    padding-top: 10px;
+}
+#products-section .product-box .star i{
+    padding-top: 10px;
+}
