@@ -66,19 +66,25 @@ p{
     color: white;
     margin: 1.098vw 0  1.464vw 0;
 }
+#cover2{
+    background-color: transparent;
+    background-image: linear-gradient(180deg,#0084D6 -50%,#000000 100%);
+    opacity: .49;
+    transition: background .3s,border-radius .3s,opacity .3s;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+}
 #cover{
-    background: rgba(0, 0, 0, 0.3);
+    background: rgba(0, 0, 0, 0.07);
     position: absolute;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
-    height: 120px;
-    z-index: 0;
-}
-#cover2{
-    background: rgba(0, 0, 0, 0.3);
-    z-index: 0;
+    height: 104px;
 }
 #hero{
     background:  url("img/hero.jpg") no-repeat center center fixed;
@@ -87,7 +93,6 @@ p{
     -o-background-size: cover;
     background-size: cover;
     height: 884px;
-
 }
 #header{
     display: flex;
@@ -95,7 +100,7 @@ p{
     padding: 10px 45px 0 45px;
     top: 0;
     left: 0;
-    z-index: 2;
+    z-index: 999;
 }
 #navbar{
     height: 103px;
@@ -141,7 +146,7 @@ p{
     padding: 200px 300px;
     align-items: flex-start;
     justify-content: center;
-    z-index: 2;
+    z-index: 999;
 }
 #hero-section h1{
     padding-bottom: 20px;
