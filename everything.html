@@ -7,8 +7,13 @@
     <title>Store</title>
     <link rel="stylesheet" type="text/css" href="style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        body {
+            background-color: #f5f7f9;
+        }
+    </style>
 </head>
-<body>
+<body >
     <section id="header" class="shop-header">
     <div>
       <ul id ="navbar" class="shop-navbar">
@@ -31,12 +36,16 @@
         <section id="secondary">
             <div id="search">
                 <input type="text" placeholder="Search...">
-                <button>b</button>
+                <button class="blue">
+                    <svg aria-hidden="true" role="img" focusable="false" class="dashicon dashicons-arrow-right-alt2" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+                        <path d="M6 15l5-5-5-5 1-2 7 7-7 7z"></path>
+                    </svg>
+                </button>
             </div>
             <div id="filter">
                 <h3>Filter by Price</h3>
                 <div id="price-amount">
-                    <button>Filter</button>
+                    <button class="blue">Filter</button>
                     <h4>120$-290$</h4>
                 </div>
             </div>
@@ -52,24 +61,280 @@
             </div>
             <div id="top-rated-products">
                 <h3>Our Best Sellers</h3>
-                <div id="top-product-box">
-                    <img src="img/top-product-jeans.jpg" alt="">
-                    <div id="top-product-info">
-                        <span>Dark Gray Jeans</span>
-                        <div class="star">
-                            <i class='bx bxs-star' ></i>
-                            <i class='bx bxs-star' ></i>
-                            <i class='bx bxs-star' ></i>
-                            <i class='bx bxs-star' ></i>
-                            <i class='bx bxs-star' ></i>
+                <ul>
+                    <li><div class="top-product-box">
+                        <img src="img/product-m-jeans1-300x300.jpg" alt="">
+                        <div class="top-product-info">
+                            <a href="">Dark Gray Jeans</a>
+                            <div class="star">
+                                <i class='bx bxs-star' ></i>
+                                <i class='bx bxs-star' ></i>
+                                <i class='bx bxs-star' ></i>
+                                <i class='bx bxs-star' ></i>
+                                <i class='bx bxs-star' ></i>
+                            </div>
+                            <h5>$150.00</h5>
                         </div>
-                        <h5>$150.00</h5>
-                    </div>
-                </div>
+                    </div></li>
+                    <li><div class="top-product-box">
+                        <img src="img/product-m-jeans1-300x300.jpg" alt="">
+                        <div class="top-product-info">
+                            <a href="">Dark Gray Jeans</a>
+                            <div class="star">
+                                <i class='bx bxs-star' ></i>
+                                <i class='bx bxs-star' ></i>
+                                <i class='bx bxs-star' ></i>
+                                <i class='bx bxs-star' ></i>
+                                <i class='bx bxs-star' ></i>
+                            </div>
+                            <h5>$150.00</h5>
+                        </div>
+                    </div></li>
+                    <li><div class="top-product-box">
+                        <img src="img/product-m-jeans1-300x300.jpg" alt="">
+                        <div class="top-product-info">
+                            <a href="">Dark Gray Jeans</a>
+                            <div class="star">
+                                <i class='bx bxs-star' ></i>
+                                <i class='bx bxs-star' ></i>
+                                <i class='bx bxs-star' ></i>
+                                <i class='bx bxs-star' ></i>
+                                <i class='bx bxs-star' ></i>
+                            </div>
+                            <h5>$150.00</h5>
+                        </div>
+                    </div></li>
+                    <li><div class="top-product-box">
+                        <img src="img/product-m-jeans1-300x300.jpg" alt="">
+                        <div class="top-product-info">
+                            <a href="">Dark Gray Jeans</a>
+                            <div class="star">
+                                <i class='bx bxs-star' ></i>
+                                <i class='bx bxs-star' ></i>
+                                <i class='bx bxs-star' ></i>
+                                <i class='bx bxs-star' ></i>
+                                <i class='bx bxs-star' ></i>
+                            </div>
+                            <h5>$150.00</h5>
+                        </div>
+                    </div></li>
+                    <li><div class="top-product-box">
+                        <img src="img/product-m-jeans1-300x300.jpg" alt="">
+                        <div class="top-product-info">
+                            <a href="">Dark Gray Jeans</a>
+                            <div class="star">
+                                <i class='bx bxs-star' ></i>
+                                <i class='bx bxs-star' ></i>
+                                <i class='bx bxs-star' ></i>
+                                <i class='bx bxs-star' ></i>
+                                <i class='bx bxs-star' ></i>
+                            </div>
+                            <h5>$150.00</h5>
+                        </div>
+                    </div></li>
+                </ul>
             </div>
         </section>
         <section id="commerce-content">
-
+            <div id="breadcrumb">
+                <a href="index.html">Home</a>
+                /Store
+            </div>
+            <div id="commerce-container-header">
+                <span>Showing 1-12 of 31 results</span>
+                <select class="orderby">
+                    <option value="menu_order" selected="selected">Default sorting</option>
+                    <option value="popularity">Sort by popularity</option>
+                    <option value="rating">Sort by average rating</option>
+                    <option value="date">Sort by latest</option>
+                    <option value="price">Sort by price: low to high</option>
+                    <option value="price-desc">Sort by price: high to low</option>
+                </select>
+            </div>
+            <div id="products-container">
+                <ul class="product-columns">
+                    <li><div class="product-box">
+                        <img src="img/sports-shoe3.jpg" alt="">
+                        <div class="desc">
+                            <h5>DNK Yellow Shoes</h5>
+                            <h6 class="gray-text">Men</h6>
+                            <h6>$120</h6>
+                            <div class="star">
+                                <i class='bx bxs-star' ></i>
+                                <i class='bx bxs-star' ></i>
+                                <i class='bx bxs-star' ></i>
+                                <i class='bx bxs-star' ></i>
+                                <i class='bx bxs-star' ></i>
+                            </div>
+                        </div>
+                    </div></li>
+                    <li><div class="product-box">
+                        <img src="img/sports-shoe3.jpg" alt="">
+                        <div class="desc">
+                            <h5>DNK Yellow Shoes</h5>
+                            <h6 class="gray-text">Men</h6>
+                            <h6>$120</h6>
+                            <div class="star">
+                                <i class='bx bxs-star' ></i>
+                                <i class='bx bxs-star' ></i>
+                                <i class='bx bxs-star' ></i>
+                                <i class='bx bxs-star' ></i>
+                                <i class='bx bxs-star' ></i>
+                            </div>
+                        </div>
+                    </div></li>
+                    <li><div class="product-box">
+                        <img src="img/sports-shoe3.jpg" alt="">
+                        <div class="desc">
+                            <h5>DNK Yellow Shoes</h5>
+                            <h6 class="gray-text">Men</h6>
+                            <h6>$120</h6>
+                            <div class="star">
+                                <i class='bx bxs-star' ></i>
+                                <i class='bx bxs-star' ></i>
+                                <i class='bx bxs-star' ></i>
+                                <i class='bx bxs-star' ></i>
+                                <i class='bx bxs-star' ></i>
+                            </div>
+                        </div>
+                    </div></li>
+                    <li><div class="product-box">
+                        <img src="img/sports-shoe3.jpg" alt="">
+                        <div class="desc">
+                            <h5>DNK Yellow Shoes</h5>
+                            <h6 class="gray-text">Men</h6>
+                            <h6>$120</h6>
+                            <div class="star">
+                                <i class='bx bxs-star' ></i>
+                                <i class='bx bxs-star' ></i>
+                                <i class='bx bxs-star' ></i>
+                                <i class='bx bxs-star' ></i>
+                                <i class='bx bxs-star' ></i>
+                            </div>
+                        </div>
+                    </div></li>
+                    <li><div class="product-box">
+                        <img src="img/sports-shoe3.jpg" alt="">
+                        <div class="desc">
+                            <h5>DNK Yellow Shoes</h5>
+                            <h6 class="gray-text">Men</h6>
+                            <h6>$120</h6>
+                            <div class="star">
+                                <i class='bx bxs-star' ></i>
+                                <i class='bx bxs-star' ></i>
+                                <i class='bx bxs-star' ></i>
+                                <i class='bx bxs-star' ></i>
+                                <i class='bx bxs-star' ></i>
+                            </div>
+                        </div>
+                    </div></li>
+                    <li><div class="product-box">
+                        <img src="img/sports-shoe3.jpg" alt="">
+                        <div class="desc">
+                            <h5>DNK Yellow Shoes</h5>
+                            <h6 class="gray-text">Men</h6>
+                            <h6>$120</h6>
+                            <div class="star">
+                                <i class='bx bxs-star' ></i>
+                                <i class='bx bxs-star' ></i>
+                                <i class='bx bxs-star' ></i>
+                                <i class='bx bxs-star' ></i>
+                                <i class='bx bxs-star' ></i>
+                            </div>
+                        </div>
+                    </div></li>
+                    <li><div class="product-box">
+                        <img src="img/sports-shoe3.jpg" alt="">
+                        <div class="desc">
+                            <h5>DNK Yellow Shoes</h5>
+                            <h6 class="gray-text">Men</h6>
+                            <h6>$120</h6>
+                            <div class="star">
+                                <i class='bx bxs-star' ></i>
+                                <i class='bx bxs-star' ></i>
+                                <i class='bx bxs-star' ></i>
+                                <i class='bx bxs-star' ></i>
+                                <i class='bx bxs-star' ></i>
+                            </div>
+                        </div>
+                    </div></li>
+                    <li><div class="product-box">
+                        <img src="img/sports-shoe3.jpg" alt="">
+                        <div class="desc">
+                            <h5>DNK Yellow Shoes</h5>
+                            <h6 class="gray-text">Men</h6>
+                            <h6>$120</h6>
+                            <div class="star">
+                                <i class='bx bxs-star' ></i>
+                                <i class='bx bxs-star' ></i>
+                                <i class='bx bxs-star' ></i>
+                                <i class='bx bxs-star' ></i>
+                                <i class='bx bxs-star' ></i>
+                            </div>
+                        </div>
+                    </div></li>
+                    <li><div class="product-box">
+                        <img src="img/sports-shoe3.jpg" alt="">
+                        <div class="desc">
+                            <h5>DNK Yellow Shoes</h5>
+                            <h6 class="gray-text">Men</h6>
+                            <h6>$120</h6>
+                            <div class="star">
+                                <i class='bx bxs-star' ></i>
+                                <i class='bx bxs-star' ></i>
+                                <i class='bx bxs-star' ></i>
+                                <i class='bx bxs-star' ></i>
+                                <i class='bx bxs-star' ></i>
+                            </div>
+                        </div>
+                    </div></li>
+                    <li><div class="product-box">
+                        <img src="img/sports-shoe3.jpg" alt="">
+                        <div class="desc">
+                            <h5>DNK Yellow Shoes</h5>
+                            <h6 class="gray-text">Men</h6>
+                            <h6>$120</h6>
+                            <div class="star">
+                                <i class='bx bxs-star' ></i>
+                                <i class='bx bxs-star' ></i>
+                                <i class='bx bxs-star' ></i>
+                                <i class='bx bxs-star' ></i>
+                                <i class='bx bxs-star' ></i>
+                            </div>
+                        </div>
+                    </div></li>
+                    <li><div class="product-box">
+                        <img src="img/sports-shoe3.jpg" alt="">
+                        <div class="desc">
+                            <h5>DNK Yellow Shoes</h5>
+                            <h6 class="gray-text">Men</h6>
+                            <h6>$120</h6>
+                            <div class="star">
+                                <i class='bx bxs-star' ></i>
+                                <i class='bx bxs-star' ></i>
+                                <i class='bx bxs-star' ></i>
+                                <i class='bx bxs-star' ></i>
+                                <i class='bx bxs-star' ></i>
+                            </div>
+                        </div>
+                    </div></li>
+                    <li><div class="product-box">
+                        <img src="img/sports-shoe3.jpg" alt="">
+                        <div class="desc">
+                            <h5>DNK Yellow Shoes</h5>
+                            <h6 class="gray-text">Men</h6>
+                            <h6>$120</h6>
+                            <div class="star">
+                                <i class='bx bxs-star' ></i>
+                                <i class='bx bxs-star' ></i>
+                                <i class='bx bxs-star' ></i>
+                                <i class='bx bxs-star' ></i>
+                                <i class='bx bxs-star' ></i>
+                            </div>
+                        </div>
+                    </div></li>
+                </ul>
+            </div>
         </section>
     </section>
 </body>

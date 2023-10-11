@@ -5,6 +5,20 @@
     box-sizing: border-box;
     font-family: 'Spartan', sans-serif;
 }
+button.blue{
+    font-size: 0.9em;
+    color: #ffffff;
+    background-color: #0075be;
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    margin: 0 0 0 6px;
+    overflow: hidden;
+    padding: 0 .5em;
+    position: relative;
+    line-height: 16px;
+    border:none;
+}
 button.normal{
     font-size: 1vw;
     font-weight: 43.92vw;
@@ -207,6 +221,7 @@ p{
     height: 152px;
     padding: 16px 35px;
     width: 1903px;
+    background-color: white;
 }
 #header .shop-navbar li a{
     text-decoration: none;
@@ -227,6 +242,7 @@ p{
     padding: 0 20px;
     margin: 0 auto;
     line-height: 29.7167px;
+    display: flex;
 }
 #secondary{
     width: 330px;
@@ -236,6 +252,7 @@ p{
     line-height: 2;
     font-size: 1em;
     padding-right: 60px;
+    margin-top: 4em;
 }
 #product-categories li{
     margin-bottom: 0.25em;
@@ -258,15 +275,59 @@ p{
 #price-amount{
     display: flex;
 }
+#price-amount button{
+    padding: 8px 18px;
+    text-transform: uppercase;
+}
+#search{
+    display: flex;
+    margin-bottom: 45px;
+}
+#search input{
+    font-size: 1rem;
+    height: 43px;
+    width: 228px;
+    border-color:#e2e2e2;
+    padding: 6px 8px;
+    background-color: #fff;
+    box-shadow: none;
+    border-radius: 0;
+    line-height: 1.8;
+    border-width: 1px;
+    border-style: solid;
+}
+#search svg{
+    fill: currentColor;
+    line-height: 16px;
+    position: static;
+}
+#filter button{
+    font-family: 'Lato',sans-serif;
+    line-height: 12.6px;
+    font-size: .9em !important;
+    margin: 0;
+}
+#price-amount{
+    display: flex;
+    line-height: 2.4;
+    font-size: .8751em;
+    text-align: right;
+    padding-bottom: 45px;
+}
+#price-amount h4{
+    justify-content: center;
+}
 #categories{
     display: flex;
     flex-direction: column;
 }
 #product-categories{
     display: flex;
+    margin-bottom: 45px;
 }
 #product-categories li{
-    display: flex;
+    width: 270px;
+    list-style: none;
 }
 #product-categories li a{
     text-decoration: none;
@@ -276,24 +337,86 @@ p{
 #product-categories li a:hover{
     color: #0075be;
 }
+#product-categories span{
+    float: right;
+}
 #top-rated-products{
     display: flex;
     flex-direction: column;
     width: 270px;
     height: 535px;
 }
-#top-product-box{
+#top-rated-products ul{
+    list-style: none;
+}
+#top-rated-products li{
+    margin-bottom: 0.25em;
+    border-bottom: 1px #e2e2e2 solid;
+    padding: 9.6px 0;
+}
+#top-rated-products img{
+    position: absolute;
+    margin: 0 0 .5em 0;
+    object-fit: cover;
+    width: 80px;
+    height: 80px;
+}
+#top-rated-products li a{
+    font-weight: 500;
+    text-decoration: none;
+    color: #333333;
+}
+#top-rated-products .star{
+    height: 1em;
+    line-height: 1;
+    font-size: 1em;
+    float: none;
+    margin: 5px 0;
+}
+#top-rated-products h3{
+    margin-bottom: 15px;
+}
+.top-product-box{
     display: flex;
+    width: 270px;
+    height: 95px;
 }
-#top-product-box img{
-    width: 4em;
-    height: 4em;
-}
-#top-product-info{
+.top-product-info{
     display: flex;
     flex-direction: column;
+    margin-left: 90px;
 }
-#top-product-info h5{
+.top-product-info h5{
     font-weight: 400;
     line-height: 1.5;
+    font-size: 100%;
+}
+#commerce-content{
+    width: 990px;
+    height: 2097px;
+    background-color: #ffffff;
+    padding: 5.34em 6.67em;
+    box-sizing: border-box;
+    display: block;
+    float: none;
+    line-height: 30px;
+    position: static;
+    margin-top: 4em;
+}
+#breadcrumb a{
+    text-decoration: none;
+    color: #333333;
+}
+.product-columns{
+    display: grid;
+    column-gap: 20px;
+    grid-template-columns: repeat(3,1fr);
+    box-sizing: border-box;
+}
+.product-columns li{
+    list-style: none;
+    margin: 0 0 1em;
+}
+.product-columns li img{
+    width: 95%;
 }
