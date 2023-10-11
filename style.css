@@ -97,7 +97,6 @@ p{
 #header{
     display: flex;
     align-items: center;
-    line-height: 30px;
     padding: 16px 45px 0 45px;
     top: 0;
     left: 0;
@@ -114,25 +113,19 @@ p{
 #header .firstlogo{
     height: 47px;
     width: 140px;
-    box-sizing: border-box;
-    display: inline;
-    float: none;
     line-height: 16px;
-    position: static;
 }
 #navbar ul{
+    align-items: center;
     display: flex;
 }
 #navbar li{
     list-style: none;
-    height: 70px;
-    width: 120px;
 }
 #navbar li a{
     height: 70px;
     width: 120px;
     text-decoration: none;
-    float: none;
     color: white;
     padding: 0 14.4px;
 }
@@ -148,7 +141,6 @@ p{
 }
 #cart-bar li{
     list-style: none;
-    position: relative;
 }
 #cart-bar li a{
     text-decoration: none;
@@ -157,8 +149,9 @@ p{
 }
 #hero-section{
     position: absolute;
-    padding: 200px 300px;
+    padding: 15%;
     justify-content: center;
+    z-index: auto;
 }
 #hero-section h1{
     padding-bottom: 20px;
