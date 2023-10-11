@@ -97,37 +97,30 @@ p{
 #header{
     display: flex;
     align-items: center;
-    padding: 16px 45px 0 45px;
+    padding: 10px 45px 0 45px;
     top: 0;
     left: 0;
     height: 104px;
-    position: absolute;
 }
 #navbar{
-    height: 71.5px;
-    width: 1020px;
+    height: 103px;
+    width: 1012px;
     display: flex;
     align-items: center;
     justify-content: left;
 }
-#header .firstlogo{
-    height: 47px;
+#navbar .firstlogo{
+    height: 46px;
     width: 140px;
-    line-height: 16px;
-}
-#navbar ul{
-    align-items: center;
-    display: flex;
 }
 #navbar li{
     list-style: none;
+    position: relative;
 }
 #navbar li a{
-    height: 70px;
-    width: 120px;
     text-decoration: none;
     color: white;
-    padding: 0 14.4px;
+    padding: 20px;
 }
 #navbar li a:hover,
 #cart-bar li a:hover{
@@ -141,6 +134,7 @@ p{
 }
 #cart-bar li{
     list-style: none;
+    position: relative;
 }
 #cart-bar li a{
     text-decoration: none;
@@ -149,9 +143,8 @@ p{
 }
 #hero-section{
     position: absolute;
-    padding: 15%;
+    padding: 200px 300px;
     justify-content: center;
-    z-index: auto;
 }
 #hero-section h1{
     padding-bottom: 20px;
@@ -179,8 +172,7 @@ p{
 }
 #products-section hr{
     width: 100px;
-    box-sizing: border-box;
-    border: 1px solid #0084D6;
+    border-top: 1px solid blue;
     margin: 0 auto;
 }
 #products-section .products-container{
@@ -210,98 +202,4 @@ p{
 }
 #products-section .product-box .star i{
     padding-top: 10px;
-}
-#header.shop-header{
-    height: 152px;
-    padding: 16px 35px;
-    width: 1903px;
-}
-#header .shop-navbar li a{
-    text-decoration: none;
-    color: black;
-}
-#header .shop-navbar li a:hover,
-#header .shop-cart-bar li a:hover{
-    color: #0084D6;
-}
-#header .shop-cart-bar li a{
-    text-decoration: none;
-    color: black;
-    padding: 20px;
-}
-#shop-content{
-    width: 1360px;
-    height: 2265px;
-    padding: 0 20px;
-    margin: 0 auto;
-    line-height: 29.7167px;
-}
-#secondary{
-    width: 330px;
-    height: 2121px;
-    display: flex;
-    flex-direction: column;
-    line-height: 2;
-    font-size: 1em;
-    padding-right: 60px;
-}
-#product-categories li{
-    margin-bottom: 0.25em;
-    padding: 2px 0;
-}
-#secondary h4{
-    color: black;
-    font-size: 13px;
-}
-#secondary h3{
-    font-size: 1.375rem;
-    color: #333333;
-    font-weight: 400;
-    margin-bottom: 1em;
-    line-height: 1.5;
-}
-#secondary h5{
-    font-size: 1em;
-}
-#price-amount{
-    display: flex;
-}
-#categories{
-    display: flex;
-    flex-direction: column;
-}
-#product-categories{
-    display: flex;
-}
-#product-categories li{
-    display: flex;
-}
-#product-categories li a{
-    text-decoration: none;
-    color: #333333;
-    transition: all .2s linear;
-}
-#product-categories li a:hover{
-    color: #0075be;
-}
-#top-rated-products{
-    display: flex;
-    flex-direction: column;
-    width: 270px;
-    height: 535px;
-}
-#top-product-box{
-    display: flex;
-}
-#top-product-box img{
-    width: 4em;
-    height: 4em;
-}
-#top-product-info{
-    display: flex;
-    flex-direction: column;
-}
-#top-product-info h5{
-    font-weight: 400;
-    line-height: 1.5;
 }
