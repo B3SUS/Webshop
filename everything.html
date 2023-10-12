@@ -35,7 +35,7 @@
     <section id="shop-content">
         <section id="secondary">
             <div id="search">
-                <input type="text" placeholder="Search...">
+                <input type="text" placeholder="Search..." class="normal-input">
                 <button class="blue">
                     <svg aria-hidden="true" role="img" focusable="false" class="dashicon dashicons-arrow-right-alt2" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
                         <path d="M6 15l5-5-5-5 1-2 7 7-7 7z"></path>
@@ -142,14 +142,16 @@
             </div>
             <div id="commerce-container-header">
                 <span>Showing 1-12 of 31 results</span>
-                <select class="orderby">
-                    <option value="menu_order" selected="selected">Default sorting</option>
-                    <option value="popularity">Sort by popularity</option>
-                    <option value="rating">Sort by average rating</option>
-                    <option value="date">Sort by latest</option>
-                    <option value="price">Sort by price: low to high</option>
-                    <option value="price-desc">Sort by price: high to low</option>
-                </select>
+                <form class="ordering" method="get">
+                    <select class="orderby" name="orderby" aria-label="Shop order">
+                        <option value="menu_order" selected="selected">Default sorting</option>
+                        <option value="popularity">Sort by popularity</option>
+                        <option value="rating">Sort by average rating</option>
+                        <option value="date">Sort by latest</option>
+                        <option value="price">Sort by price: low to high</option>
+                        <option value="price-desc">Sort by price: high to low</option>
+                    </select>
+                </form>
             </div>
             <div id="products-container">
                 <ul class="product-columns">
@@ -335,7 +337,63 @@
                     </div></li>
                 </ul>
             </div>
+            <div id="pagination">
+                <ul class="page-nav">
+                    <li><a href=""><button class="normal">1</button></a></li>
+                    <li><a href=""><button class="normal">2</button></a></li>
+                    <li><a href=""><button class="normal">3</button></a></li>
+                    <li><a href=""><button class="normal">→</button></a></li>
+                </ul>
+            </div>
         </section>
+    </section>
+    <section id="footer">
+        <div id="saleup">
+            <a href="everything.html"><h3>SALE UP TO 70% OFF FOR ALL CLOTHES & FASHION ITEMS, ON ALL BRANDS.</h3></a>
+        </div>
+        <div id="primary-footer">
+            <div id="logo-footer">
+                <img src="img/logo@2x-free-img-120x40.png" alt="">
+                <h3>The best look anytime, anywhere.</h3>
+            </div>
+            <div class="for-them">
+                <span>For Her</span>
+                <ul class="footer-links">
+                    <li><a href=""><h4>Women Jeans</h4></a></li>
+                    <li><a href=""><h4>Tops and Shirts</h4></a></li>
+                    <li><a href=""><h4>Women Jackets</h4></a></li>
+                    <li><a href=""><h4>Heels and Flats</h4></a></li>
+                    <li><a href=""><h4>Women Accessories</h4></a></li>
+                </ul>
+            </div>
+            <div class="for-them">
+                <span>For Him</span>
+                <ul class="footer-links">
+                    <li><a href=""><h4>Men Jeans</h4></a></li>
+                    <li><a href=""><h4>Men Shirts</h4></a></li>
+                    <li><a href=""><h4>Men Shoes</h4></a></li>
+                    <li><a href=""><h4>Men Accessories</h4></a></li>
+                    <li><a href=""><h4>Men Jackets</h4></a></li>
+                </ul>
+            </div>
+            <div id="sub">
+                <span>Subscribe</span>
+                <input type="text" placeholder="Your email address..." class="normal-input">
+                <button class="blue">Subscribe</button>
+            </div>
+        </div>
+        <div id="last-part">
+            <div id="copyright">
+                <h3>Copyright © 2023 B3SUS. Powered by WebStorm.</h3>
+                <div id="logos">
+                    <a><i class='bx bxl-facebook'></i></a>
+                    <a><i class='bx bxl-youtube' ></i></a>
+                    <a><i class='bx bxl-twitter' ></i></a>
+                    <a><i class='bx bxl-instagram' ></i></a>
+                    <a><i class='bx bxl-google'></i></a>
+                </div>
+            </div>
+        </div>
     </section>
 </body>
 </html>

@@ -19,6 +19,10 @@ button.blue{
     line-height: 16px;
     border:none;
 }
+button.blue:hover{
+    background-color: #0069be;
+    border-color: #0069be;
+}
 button.normal{
     font-size: 1vw;
     font-weight: 43.92vw;
@@ -228,8 +232,13 @@ p{
     color: black;
 }
 #header .shop-navbar li a:hover,
-#header .shop-cart-bar li a:hover{
+#header .shop-cart-bar li a:hover,
+#saleup h3:hover,
+.footer-links li a h4:hover,
+#logos a:hover{
     color: #0084D6;
+    transition: 0.2s;
+    cursor: pointer;
 }
 #header .shop-cart-bar li a{
     text-decoration: none;
@@ -238,11 +247,12 @@ p{
 }
 #shop-content{
     width: 1360px;
-    height: 2265px;
+    height: 1964px;
     padding: 0 20px;
     margin: 0 auto;
     line-height: 29.7167px;
     display: flex;
+    margin-bottom: 50px;
 }
 #secondary{
     width: 330px;
@@ -283,7 +293,7 @@ p{
     display: flex;
     margin-bottom: 45px;
 }
-#search input{
+input.normal-input{
     font-size: 1rem;
     height: 43px;
     width: 228px;
@@ -393,7 +403,7 @@ p{
 }
 #commerce-content{
     width: 990px;
-    height: 2097px;
+    height: 1900px;
     background-color: #ffffff;
     padding: 5.34em 6.67em;
     box-sizing: border-box;
@@ -403,15 +413,34 @@ p{
     position: static;
     margin-top: 4em;
 }
+#breadcrumb{
+    margin-bottom: 1em;
+}
 #breadcrumb a{
     text-decoration: none;
     color: #333333;
+}
+#commerce-container-header{
+    margin: 1em 0 40px;
+}
+.ordering{
+    float: right;
+    margin: 0 0 40px;
+}
+.orderby{
+    background-color: transparent;
+    border: transparent;
+}
+.orderby select{
+    font-size: 1rem;
+    background-color: #f5f7f9;
 }
 .product-columns{
     display: grid;
     column-gap: 20px;
     grid-template-columns: repeat(3,1fr);
     box-sizing: border-box;
+    padding-bottom: 1em;
 }
 .product-columns li{
     list-style: none;
@@ -419,4 +448,144 @@ p{
 }
 .product-columns li img{
     width: 95%;
+}
+.page-nav{
+    display: flex;
+    list-style: disc;
+    padding: 0;
+    margin: 0;
+}
+.page-nav li{
+    list-style: none;
+    border: 1px solid black;
+    transition: 0.2s;
+    margin: 4px;
+}
+.page-nav button{
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    margin: 0;
+}
+#footer{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    bottom: 0;
+}
+#saleup{
+    padding: 20px 0;
+    height: 100px;
+    border-top: 1px solid #dddddd;
+    justify-content: center;
+    align-items: center;
+    display: grid;
+    position: static;
+}
+#saleup a{
+    text-decoration: none;
+}
+#saleup h3{
+    color: black;
+    font-size: 1.5rem;
+    float: none;
+}
+#primary-footer{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    height: 373px;
+    padding: 75px 0 100px 0;
+    border-top: 1px solid #dddddd;
+}
+#primary-footer h3{
+    font-weight: 500;
+}
+#primary-footer span{
+    font-weight: 600;
+}
+#logo-footer{
+    display: flex;
+    flex-direction: column;
+    width: 480px;
+    height: 108px;
+    text-align: left;
+}
+#logo-footer img{
+    width: 90px;
+    height: 30px;
+    margin-bottom: 50px;
+}
+#logo-footer h3{
+    color: #333333;
+    font-size: 1.375rem;
+}
+.for-them{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    width: 240px;
+    height: 150px;
+    line-height: 30px;
+}
+.for-them span{
+    font-size: 18px;
+}
+.footer-links{
+    padding-top: 20px;
+}
+.footer-links li{
+    list-style: none;
+}
+.footer-links a{
+    text-decoration: none;
+}
+.footer-links  h4{
+    color: #abb8c3;
+    font-size: 17px;
+    font-weight: 400;
+}
+#sub{
+    display: flex;
+    flex-direction: column;
+    height: 170px;
+    width: 240px;
+}
+#sub span{
+    margin-bottom: 1.4em;
+}
+#sub input{
+    margin-bottom: 1.4em;
+}
+#sub button{
+    padding: 16px 28px;
+    text-transform: uppercase;
+    width: 140px;
+    height: 46px;
+    font-weight: 600;
+}
+#last-part{
+    border-top: 1px solid #dddddd;
+}
+#copyright{
+    display: flex;
+    padding: 20px 0;
+    height: 80px;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 350px;
+}
+#copyright h3{
+    color: black;
+    font-weight: 400;
+    font-size: 13px;
+}
+#logos{
+    display: flex;
+    align-items: center;
+    width: 240px;
+    justify-content: space-between;
+}
+#logos i{
+    font-size: 25px;
 }
