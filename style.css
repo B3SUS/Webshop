@@ -589,3 +589,138 @@ input.normal-input{
 #logos i{
     font-size: 25px;
 }
+#cart-section{
+    text-align: center;
+}
+#cart-section h1{
+    color: #424242;
+    padding: 50px 0;
+    font-size: 55px;
+}
+#cart{
+}
+#cart table{
+    width: 60%;
+    border-collapse: collapse;
+    table-layout: fixed;
+    white-space: nowrap;
+    margin: 0 auto;
+    border: 1px solid #dddddd;
+}
+
+#cart table img{
+    width: 5.124vw;
+}
+#cart table td{
+    border-bottom: 1px solid #dddddd;
+}
+
+#cart table td:nth-child(1){
+    width: 7.32vw;
+    text-align: center;
+}
+
+#cart table td:nth-child(2){
+    width: 10.98vw;
+    text-align: center;
+}
+
+#cart table td:nth-child(3){
+    width: 18.3vw;
+    text-align: center;
+}
+
+#cart table td:nth-child(4),
+#cart table td:nth-child(5),
+#cart table td:nth-child(6){
+    width: 10.98vw;
+    text-align: center;
+}
+
+#cart table td:nth-child(5) input{
+    width: 5.124vw;
+    padding: 0.732vw 0.366vw 0.732vw 1.098vw;
+}
+#cart table i{
+    color: #333333;
+    font-size: 25px;
+}
+
+#cart table thead{
+    border: 1px solid #e2e9e1;
+    border-left: none;
+    border-right: none;
+}
+
+#cart table thead td{
+    font-weight: 700;;
+    text-transform: uppercase;
+    font-size: 0.952vw;
+    padding: 1.317vw 0;
+}
+
+#cart tbody tr td{
+    padding-top: 1.098vw;
+}
+
+#cart table tbody td{
+    font-size: 0.852vw;
+}
+
+#cart-add{
+    display: flex;
+}
+#coupon{
+    width: 50%;
+}
+
+#coupon h3,
+#subtotal h3{
+    padding-bottom: 1.099vw;
+    color: black;
+}
+#coupon input{
+    padding: 0.732vw 1.464vw;
+    outline: none;
+    width: 50%;
+    margin-right: 0.732vw;
+    border: 0.0732vw solid #e2e9e1;
+}
+
+#subtotal{
+    width: 70%;
+    margin-bottom: 2.196vw;
+    border: 0.0732vw solid #e2e9e1;
+    padding: 2.196vw;
+    margin-right: 280px;
+}
+#subtotal table{
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 1.464vw;
+}
+
+#subtotal table td{
+    width: 50%;
+    border: 0.0732vw solid #e2e9e1;
+    padding: 0.732vw;
+    font-size: 0.952vw;
+}
+#cart-add{
+    margin: 0 auto;
+}
+#coupon{
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0;
+    height: 80px;
+    margin: 0 280px;
+    text-align: left;
+}
+#add-coupon{
+    display: flex;
+}
+#coupon button,
+#subtotal button{
+    padding: 15px;
+}
