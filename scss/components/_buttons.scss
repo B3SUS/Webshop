@@ -1,0 +1,47 @@
+@use "../abstracts/variables" as var;
+button.blue {
+  font-size: 0.9em;
+  color: var.$color_1;
+  background-color: var.$background-color_1;
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  margin: 0 0 0 6px;
+  overflow: hidden;
+  padding: 15px;
+  position: relative;
+  line-height: 16px;
+  border: none;
+  &:hover {
+    background-color: var.$background-color_2;
+    border-color: var.$border-color_1;
+  }
+}
+button.normal {
+  font-size: 1vw;
+  padding: 0.805vw 1.317vw;
+  color: var.$color_2;
+  background-color: var.$background-color_3;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  transition: 0.2s;
+  &:hover {
+    color: var.$color_3;
+    background: black;
+  }
+}
+button.white {
+  font-size: 1vw;
+  padding: 0.805vw 1.317vw;
+  color: var.$color_4;
+  background-color: var.$background-color_4;
+  cursor: pointer;
+  border: 0.0732vw solid #fff;
+  outline: none;
+  transition: 0.2s;
+  &:hover {
+    color: var.$color_5;
+    background: white;
+  }
+}

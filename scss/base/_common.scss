@@ -1,0 +1,58 @@
+@use "../abstracts/variables" as var;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var.$font-family_1;
+}
+h1 {
+  font-size: 3.66vw;
+  line-height: 8.33vh;
+  color: var.$color_3;
+}
+h2 {
+  font-size: 2.396vw;
+  line-height: 5.825vh;
+  color: var.$color_5;
+}
+h3 {
+  color: var.$color_3;
+  font-size: 1.3vw;
+  line-height: 4vh;
+}
+h4 {
+  font-size: 1.46vw;
+  color: var.$color_3;
+}
+h6 {
+  color: var.$color_5;
+}
+h6.gray-text {
+  color: var.$color_6;
+}
+p {
+  font-size: 1.171vw;
+  color: var.$color_3;
+  margin: 1.098vw 0 1.464vw 0;
+}
+.header {
+  display: flex;
+  align-items: center;
+  padding: 10px 45px 0 45px;
+  top: 0;
+  left: 0;
+  height: 104px;
+}
+input.normal-input {
+  font-size: 1rem;
+  height: 43px;
+  width: 228px;
+  border-color: var.$border-color_2;
+  padding: 6px 8px;
+  background-color: var.$background-color_3;
+  box-shadow: none;
+  border-radius: 0;
+  line-height: 1.8;
+  border-width: 1px;
+  border-style: solid;
+}

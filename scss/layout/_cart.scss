@@ -1,0 +1,135 @@
+@use "../abstracts/variables" as var;
+#cart-section {
+  text-align: center;
+  h1 {
+    color: var.$color_11;
+    padding: 50px 0;
+    font-size: 55px;
+  }
+  #cart {
+    table {
+      width: 60%;
+      border-collapse: collapse;
+      table-layout: fixed;
+      white-space: nowrap;
+      margin: 0 auto;
+      border: 1px solid #dddddd;
+      img {
+        width: 5.124vw;
+      }
+      td {
+        border-bottom: 1px solid #dddddd;
+        &:nth-child(1) {
+          width: 7.32vw;
+          text-align: center;
+        }
+        &:nth-child(2) {
+          width: 10.98vw;
+          text-align: center;
+        }
+        &:nth-child(3) {
+          width: 18.3vw;
+          text-align: center;
+        }
+        &:nth-child(4) {
+          width: 10.98vw;
+          text-align: center;
+        }
+        &:nth-child(5) {
+          width: 10.98vw;
+          text-align: center;
+          input {
+            width: 5.124vw;
+            padding: 0.732vw 0.366vw 0.732vw 1.098vw;
+          }
+        }
+        &:nth-child(6) {
+          width: 10.98vw;
+          text-align: center;
+        }
+      }
+      i {
+        color: var.$color_8;
+        font-size: 25px;
+      }
+      thead {
+        border: 1px solid #e2e9e1;
+        border-left: none;
+        border-right: none;
+        td {
+          font-weight: 700;
+          text-transform: uppercase;
+          font-size: 0.952vw;
+          padding: 1.317vw 0;
+        }
+      }
+      tbody {
+        td {
+          font-size: 0.852vw;
+        }
+      }
+    }
+    tbody {
+      tr {
+        td {
+          padding-top: 1.098vw;
+        }
+      }
+    }
+  }
+  #cart-add {
+    display: flex;
+    margin: 0 auto;
+    #coupon {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      padding: 20px 0;
+      height: 80px;
+      margin: 0 280px;
+      text-align: left;
+      h3 {
+        padding-bottom: 1.099vw;
+        color: var.$color_5;
+      }
+      input {
+        padding: 0.732vw 1.464vw;
+        outline: none;
+        width: 50%;
+        margin-right: 0.732vw;
+        border: 0.0732vw solid #e2e9e1;
+      }
+      button {
+        padding: 15px;
+      }
+      #add-coupon {
+        display: flex;
+      }
+    }
+    #subtotal {
+      h3 {
+        padding-bottom: 1.099vw;
+        color: var.$color_5;
+      }
+      width: 70%;
+      margin-bottom: 2.196vw;
+      border: 0.0732vw solid #e2e9e1;
+      padding: 2.196vw;
+      margin-right: 280px;
+      table {
+        border-collapse: collapse;
+        width: 100%;
+        margin-bottom: 1.464vw;
+        td {
+          width: 50%;
+          border: 0.0732vw solid #e2e9e1;
+          padding: 0.732vw;
+          font-size: 0.952vw;
+        }
+      }
+      button {
+        padding: 15px;
+      }
+    }
+  }
+}

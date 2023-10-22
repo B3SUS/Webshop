@@ -1,0 +1,206 @@
+@use "../abstracts/variables" as var;
+#shop-content {
+  width: 1360px;
+  height: 1964px;
+  padding: 0 20px;
+  line-height: 29.7167px;
+  display: flex;
+  margin: 0 auto 50px;
+  #secondary {
+    width: 330px;
+    height: 2121px;
+    display: flex;
+    flex-direction: column;
+    line-height: 2;
+    font-size: 1em;
+    padding-right: 60px;
+    margin-top: 4em;
+    h4 {
+      color: var.$color_5;
+      font-size: 13px;
+    }
+    h3 {
+      font-size: 1.375rem;
+      color: var.$color_8;
+      font-weight: 400;
+      margin-bottom: 1em;
+      line-height: 1.5;
+    }
+    h5 {
+      font-size: 1em;
+    }
+    #search {
+      display: flex;
+      margin-bottom: 45px;
+      svg {
+        fill: currentColor;
+        line-height: 16px;
+        position: static;
+      }
+    }
+    #filter {
+      button {
+        font-family: var.$font-family_2;
+        line-height: 12.6px;
+        font-size: .9em !important;
+        margin: 0;
+      }
+      #price-amount {
+        display: flex;
+        line-height: 2.4;
+        font-size: .8751em;
+        text-align: right;
+        padding-bottom: 45px;
+        button {
+          padding: 8px 18px;
+          text-transform: uppercase;
+        }
+        h4 {
+          justify-content: center;
+        }
+      }
+    }
+    #categories {
+      display: flex;
+      flex-direction: column;
+      #product-categories {
+        li {
+          margin-bottom: 0.25em;
+          padding: 2px 0;
+          width: 270px;
+          list-style: none;
+          a {
+            text-decoration: none;
+            color: var.$color_8;
+            transition: all .2s linear;
+            &:hover {
+              color: var.$color_9;
+            }
+          }
+        }
+        display: flex;
+        margin-bottom: 45px;
+        span {
+          float: right;
+        }
+      }
+    }
+    #top-rated-products {
+      display: flex;
+      flex-direction: column;
+      width: 270px;
+      height: 535px;
+      ul {
+        list-style: none;
+      }
+      li {
+        margin-bottom: 0.25em;
+        border-bottom: 1px #e2e2e2 solid;
+        padding: 9.6px 0;
+        a {
+          font-weight: 500;
+          text-decoration: none;
+          color: var.$color_8;
+        }
+      }
+      img {
+        position: absolute;
+        margin: 0 0 .5em 0;
+        object-fit: cover;
+        width: 80px;
+        height: 80px;
+      }
+      .star {
+        height: 1em;
+        line-height: 1;
+        font-size: 1em;
+        float: none;
+        margin: 5px 0;
+      }
+      h3 {
+        margin-bottom: 15px;
+      }
+      .top-product-box {
+        display: flex;
+        width: 270px;
+        height: 95px;
+      }
+      .top-product-info {
+        display: flex;
+        flex-direction: column;
+        margin-left: 90px;
+        h5 {
+          font-weight: 400;
+          line-height: 1.5;
+          font-size: 100%;
+        }
+      }
+    }
+  }
+  #commerce-content {
+    width: 990px;
+    height: 1900px;
+    background-color: var.$background-color_6;
+    padding: 5.34em 6.67em;
+    box-sizing: border-box;
+    display: block;
+    float: none;
+    line-height: 30px;
+    position: static;
+    margin-top: 4em;
+    #breadcrumb {
+      margin-bottom: 1em;
+      a {
+        text-decoration: none;
+        color: var.$color_8;
+      }
+    }
+    #commerce-container-header {
+      margin: 1em 0 40px;
+      .ordering {
+        float: right;
+        margin: 0 0 40px;
+        .orderby {
+          background-color: var.$background-color_4;
+          border: transparent;
+          select {
+            font-size: 1rem;
+            background-color: var.$background-color_7;
+          }
+        }
+      }
+    }
+    .product-columns {
+      display: grid;
+      column-gap: 20px;
+      grid-template-columns: repeat(3,1fr);
+      box-sizing: border-box;
+      padding-bottom: 1em;
+      li {
+        list-style: none;
+        margin: 0 0 1em;
+        img {
+          width: 95%;
+        }
+      }
+    }
+  }
+  .page-nav {
+    display: flex;
+    list-style: disc;
+    padding: 0;
+    margin: 0;
+    li {
+      list-style: none;
+      border: 1px solid black;
+      transition: 0.2s;
+      margin: 4px;
+    }
+    button {
+      width: 40px;
+      height: 40px;
+      padding: 0;
+      margin: 0;
+    }
+  }
+}

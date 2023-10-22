@@ -1,0 +1,35 @@
+@use "../abstracts/variables" as var;
+
+.shop-header {
+  height: 152px;
+  padding: 16px 35px;
+  width: 1903px;
+  background-color: var.$background-color_5;
+}
+.shop-navbar {
+  li {
+    a {
+      text-decoration: none;
+      color: var.$color_5;
+      &:hover {
+        color: var.$color_7;
+        transition: 0.2s;
+        cursor: pointer;
+      }
+    }
+  }
+}
+.shop-cart-bar {
+  li {
+    a {
+      &:hover {
+        color: var.$color_7;
+        transition: 0.2s;
+        cursor: pointer;
+      }
+      text-decoration: none;
+      color: var.$color_5;
+      padding: 20px;
+    }
+  }
+}
