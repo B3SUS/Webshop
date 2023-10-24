@@ -137,75 +137,54 @@
   font-size: 25px;
 }
 
-.navbar {
+.header-main {
+  background: rgba(0, 0, 0, 0.07);
+}
+.header-main .navbar {
   height: 103px;
   width: 1012px;
   display: flex;
   align-items: center;
   justify-content: left;
 }
-.navbar .firstlogo {
+.header-main .navbar .first-logo {
   height: 46px;
   width: 140px;
 }
-.navbar li {
+.header-main .navbar li {
   list-style: none;
   position: relative;
 }
-.navbar li a {
+.header-main .navbar li a {
   text-decoration: none;
   color: white;
   padding: 20px;
 }
-.navbar li a:hover {
+.header-main .navbar li a:hover {
   color: black;
 }
-
-.cart-bar {
+.header-main .cart-bar {
   width: 801px;
   display: flex;
   align-items: center;
   justify-content: right;
 }
-.cart-bar li {
+.header-main .cart-bar li {
   list-style: none;
   position: relative;
 }
-.cart-bar li a {
+.header-main .cart-bar li a {
   text-decoration: none;
   color: white;
   padding: 20px;
 }
-.cart-bar li a:hover {
+.header-main .cart-bar li a:hover {
   color: black;
-}
-
-#cover {
-  background: rgba(0, 0, 0, 0.07);
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 104px;
-}
-
-#cover2 {
-  background-color: transparent;
-  background-image: linear-gradient(180deg, #0084D6 -50%, #000000 100%);
-  opacity: 0.49;
-  transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 884px;
 }
 
 .shop-header {
   height: 152px;
   padding: 16px 35px;
-  width: 1903px;
   background-color: white;
 }
 
@@ -230,30 +209,76 @@
   cursor: pointer;
 }
 
-#hero-section {
+#hero {
+  background: url("/img/hero.jpg") no-repeat center;
+  background-size: cover;
+  height: 95.36vh;
+  position: relative;
+}
+#hero #cover2 {
+  background-color: transparent;
+  background-image: linear-gradient(180deg, #0084D6 -50%, #000000 100%);
+  opacity: 0.49;
+  transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
   position: absolute;
-  padding: 200px 300px;
+  width: 100%;
+  height: 100%;
+}
+@media only screen and (max-width: 420px) {
+  #hero {
+    height: 500px;
+  }
+}
+#hero .hero-section {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  position: relative;
+  align-items: center;
   justify-content: center;
 }
-#hero-section h1 {
-  padding-bottom: 20px;
-  line-height: 1.2em;
-  font-size: 4.125rem;
+#hero .hero-section .hero-text-container {
+  width: 65%;
 }
-#hero-section h3 {
+#hero .hero-section .hero-text-container .hero-text-container-flex {
+  padding: 0 50% 0 0;
+}
+#hero .hero-section .hero-text-container .hero-text-container-flex h1 {
+  padding-bottom: 20px;
+  line-height: 1.2;
+  font-size: 3.438vw;
+  word-wrap: break-word;
+}
+#hero .hero-section .hero-text-container .hero-text-container-flex h3 {
   padding-bottom: 40px;
 }
-#hero-section button {
+#hero .hero-section .hero-text-container .hero-text-container-flex button {
   margin-right: 15px;
 }
-
-#hero {
-  background: url("/img/hero.jpg") no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  height: 884px;
+@media only screen and (max-width: 420px) {
+  #hero .hero-section .hero-text-container {
+    margin: 0 auto;
+    width: 340px;
+  }
+  #hero .hero-section .hero-text-container .hero-text-container-flex {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+  }
+  #hero .hero-section .hero-text-container .hero-text-container-flex h1 {
+    text-align: center;
+    font-size: 30px;
+    line-height: 35px;
+  }
+  #hero .hero-section .hero-text-container .hero-text-container-flex h3 {
+    font-size: 20px;
+    text-align: center;
+  }
+  #hero .hero-section .hero-text-container .hero-text-container-flex button {
+    font-size: 18px;
+    padding: 12px 0;
+    margin-bottom: 15px;
+  }
 }
 
 #products-section {
@@ -641,6 +666,10 @@
   font-family: "Spartan", sans-serif;
 }
 
+body {
+  position: relative;
+}
+
 h1 {
   font-size: 3.66vw;
   line-height: 8.33vh;
@@ -685,6 +714,9 @@ p {
   top: 0;
   left: 0;
   height: 104px;
+  width: 100%;
+  position: absolute;
+  z-index: 2;
 }
 
 input.normal-input {
