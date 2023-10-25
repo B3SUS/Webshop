@@ -1,4 +1,7 @@
+@use "../abstracts/mixins" as m;
 #products-section {
+  display: flex;
+  flex-direction: column;
   text-align: center;
   background: #f5f7f9;
   padding-top: 100px;
@@ -16,9 +19,10 @@
     margin: 0 auto;
   }
   .products-container {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    display: grid;
+    column-gap: 20px;
+    grid-template-columns: repeat(5,1fr);
+    box-sizing: border-box;
     margin: 100px 250px;
   }
   .product-box {
@@ -42,6 +46,28 @@
     .star {
       i {
         padding-top: 10px;
+      }
+    }
+  }
+  @include m.mobile{
+    padding-top: 50px;
+    h2{
+      font-size: 25px;
+    }
+    .products-container{
+      padding-top: 50px;
+      grid-template-columns: repeat(2,1fr);
+      margin: 0;
+    }
+    .product-box{
+      height: auto;
+      width: 80%;
+      margin-bottom: 50px;
+      justify-self: center;
+      align-self: center;
+      img{
+        height: auto;
+        width: 100%;
       }
     }
   }

@@ -1,4 +1,5 @@
 @use "../abstracts/variables" as var;
+@use "../abstracts/mixins" as m;
 #footer {
   display: flex;
   flex-direction: column;
@@ -24,6 +25,13 @@
     position: static;
     a {
       text-decoration: none;
+    }
+    @include m.mobile{
+      h3{
+        font-size: 18px;
+      }
+      height: auto;
+      text-align: center;
     }
   }
   #primary-footer {
@@ -109,7 +117,7 @@
       }
     }
   }
-  #last-part {
+  .last-part {
     border-top: 1px solid #dddddd;
     #copyright {
       display: flex;

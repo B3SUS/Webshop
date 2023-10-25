@@ -27,6 +27,15 @@
 #footer #saleup a {
   text-decoration: none;
 }
+@media only screen and (max-width: 420px) {
+  #footer #saleup {
+    height: auto;
+    text-align: center;
+  }
+  #footer #saleup h3 {
+    font-size: 18px;
+  }
+}
 #footer #primary-footer {
   display: flex;
   align-content: center;
@@ -106,10 +115,10 @@
   height: 46px;
   font-weight: 600;
 }
-#footer #last-part {
+#footer .last-part {
   border-top: 1px solid #dddddd;
 }
-#footer #last-part #copyright {
+#footer .last-part #copyright {
   display: flex;
   padding: 20px 0;
   height: 80px;
@@ -117,23 +126,23 @@
   align-items: center;
   margin: 0 350px;
 }
-#footer #last-part #copyright h3 {
+#footer .last-part #copyright h3 {
   color: black;
   font-weight: 400;
   font-size: 13px;
 }
-#footer #last-part #copyright #logos {
+#footer .last-part #copyright #logos {
   display: flex;
   align-items: center;
   width: 240px;
   justify-content: space-between;
 }
-#footer #last-part #copyright #logos a:hover {
+#footer .last-part #copyright #logos a:hover {
   color: #0084D6;
   transition: 0.2s;
   cursor: pointer;
 }
-#footer #last-part #copyright #logos i {
+#footer .last-part #copyright #logos i {
   font-size: 25px;
 }
 
@@ -282,6 +291,8 @@
 }
 
 #products-section {
+  display: flex;
+  flex-direction: column;
   text-align: center;
   background: #f5f7f9;
   padding-top: 100px;
@@ -300,9 +311,10 @@
   margin: 0 auto;
 }
 #products-section .products-container {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  display: grid;
+  column-gap: 20px;
+  grid-template-columns: repeat(5, 1fr);
+  box-sizing: border-box;
   margin: 100px 250px;
 }
 #products-section .product-box {
@@ -326,6 +338,30 @@
 }
 #products-section .product-box .star i {
   padding-top: 10px;
+}
+@media only screen and (max-width: 420px) {
+  #products-section {
+    padding-top: 50px;
+  }
+  #products-section h2 {
+    font-size: 25px;
+  }
+  #products-section .products-container {
+    padding-top: 50px;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 0;
+  }
+  #products-section .product-box {
+    height: auto;
+    width: 80%;
+    margin-bottom: 50px;
+    justify-self: center;
+    align-self: center;
+  }
+  #products-section .product-box img {
+    height: auto;
+    width: 100%;
+  }
 }
 
 #shop-content {
