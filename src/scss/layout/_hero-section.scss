@@ -1,7 +1,7 @@
 @use "../abstracts/variables" as var;
 @use "../abstracts/mixins" as m;
 #hero {
-  background: url("/img/hero.jpg") no-repeat center;
+  background: no-repeat center;
   background-size: cover;
   height: 95.36vh;
   position: relative;

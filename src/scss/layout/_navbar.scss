@@ -1,0 +1,80 @@
+@use "../abstracts/variables" as var;
+.navbar{
+  background: rgba(0, 0, 0, 0.07);
+  display: flex;
+  height: 103px;
+  width: 100%;
+  position: absolute;
+  z-index: 2;
+  .left-side {
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    height: 100%;
+    .first-logo {
+      height: 46px;
+      width: 140px;
+    }
+    li {
+      list-style: none;
+      position: relative;
+      a {
+        text-decoration: none;
+        color: var.$color_3;
+        padding: 20px;
+        &:hover {
+          color: var.$color_5;
+          transition: 0.2s;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  .right-side {
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    li {
+      a {
+        &:hover {
+          color: var.$color_5;
+          transition: 0.2s;
+          cursor: pointer;
+        }
+        text-decoration: none;
+        color: var.$color_3;
+        padding: 20px;
+      }
+      list-style: none;
+      position: relative;
+    }
+  }
+}
+.white-navbar {
+  height: 152px;
+  padding: 16px 35px;
+  background-color: var.$background-color_5;
+  position: unset;
+  .left-side-navbar-white {
+    li {
+      a {
+        color: var.$color_5;
+        &:hover {
+          color: var.$color_7;
+        }
+      }
+    }
+  }
+  .right-side-navbar-white {
+    li {
+      a {
+        &:hover {
+          color: var.$color_7;
+        }
+        color: var.$color_5;
+      }
+    }
+  }
+}
