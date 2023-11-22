@@ -1,9 +1,8 @@
 @use "../abstracts/mixins" as m;
-#products-section {
+.products-section {
   display: flex;
   flex-direction: column;
   text-align: center;
-  background: #f5f7f9;
   padding-top: 100px;
   .featured {
     display: flex;
@@ -68,6 +67,12 @@
       img{
         height: auto;
         width: 100%;
+      }
+      h5 {
+        margin-top: 0.5em;
+      }
+      h6 {
+        margin-top: 0.5em;
       }
     }
   }

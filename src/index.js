@@ -3,7 +3,6 @@ import { createRoot } from 'react-dom/client';
 import './scss/main.css'
 import App from './App';
 import { BrowserRouter } from "react-router-dom";
-import 'boxicons';
 
 
 const root = document.getElementById('root');

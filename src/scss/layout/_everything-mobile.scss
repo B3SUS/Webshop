@@ -1,20 +1,80 @@
 @use "../abstracts/variables" as var;
-.shop-content {
-  width: 1360px;
-  height: 1964px;
-  padding: 0 20px;
-  line-height: 29.7167px;
-  display: flex;
-  margin: 0 auto 50px;
-  .secondary {
-    width: 330px;
-    height: 2121px;
+.shop-content-mobile{
+  padding: 40px 5px 0 5px;
+  background-color: var.$background-color_7;
+  .main-area{
+    padding: 0 23px;
     display: flex;
     flex-direction: column;
+    background-color: var.$background-color_5;
+    .breadcrumb{
+      padding-top: 20px;
+      color: #666;
+      margin-bottom: 1em;
+      a {
+        text-decoration: none;
+        color: #666;
+      }
+    }
+    .commerce-container-header {
+      padding-top: 20px;
+      .ordering {
+        margin: 40px 0 0;
+        .orderby {
+          color: #666;
+          background-color: var.$background-color_4;
+          border: var.$background-color_4;
+          select {
+            font-size: 1rem;
+            background-color: var.$background-color_7;
+          }
+        }
+      }
+    }
+    .product-columns {
+      padding-top: 40px;
+      display: grid;
+      column-gap: 10px;
+      grid-template-columns: repeat(2,1fr);
+      box-sizing: border-box;
+      padding-bottom: 1em;
+      li {
+        list-style: none;
+        margin-bottom: 1em;
+        img {
+          width: 95%;
+        }
+      }
+    }
+    .page-nav-mobile {
+      display: flex;
+      list-style: disc;
+      padding: 0;
+      margin: 0 0 40px 0;
+      li {
+        list-style: none;
+        border: 1px solid black;
+        transition: 0.2s;
+        margin: 4px;
+      }
+      button {
+        width: 40px;
+        height: 40px;
+        padding: 0;
+        margin: 0;
+        font-size: 1em;
+      }
+    }
+  }
+  .secondary {
+    height: 1100px;
+    background-color: var.$background-color_7;
+    display: flex;
+    flex-direction: column;
+    margin-left: 1em;
     line-height: 2;
     font-size: 1em;
-    padding-right: 60px;
-    margin-top: 4em;
+    margin-top: 1em;
     h4 {
       color: var.$color_5;
       font-size: 13px;
@@ -135,72 +195,6 @@
           font-size: 100%;
         }
       }
-    }
-  }
-  .commerce-content {
-    width: 990px;
-    height: 1900px;
-    background-color: var.$background-color_6;
-    padding: 5.34em 6.67em;
-    box-sizing: border-box;
-    display: block;
-    float: none;
-    line-height: 30px;
-    position: static;
-    margin-top: 4em;
-    .breadcrumb {
-      margin-bottom: 1em;
-      a {
-        text-decoration: none;
-        color: var.$color_8;
-      }
-    }
-    .commerce-container-header {
-      margin: 1em 0 40px;
-      .ordering {
-        float: right;
-        margin: 0 0 40px;
-        .orderby {
-          background-color: var.$background-color_4;
-          border: transparent;
-          select {
-            font-size: 1rem;
-            background-color: var.$background-color_7;
-          }
-        }
-      }
-    }
-    .product-columns {
-      display: grid;
-      column-gap: 20px;
-      grid-template-columns: repeat(3,1fr);
-      box-sizing: border-box;
-      padding-bottom: 1em;
-      li {
-        list-style: none;
-        margin: 0 0 1em;
-        img {
-          width: 95%;
-        }
-      }
-    }
-  }
-  .page-nav {
-    display: flex;
-    list-style: disc;
-    padding: 0;
-    margin: 0;
-    li {
-      list-style: none;
-      border: 1px solid black;
-      transition: 0.2s;
-      margin: 4px;
-    }
-    button {
-      width: 40px;
-      height: 40px;
-      padding: 0;
-      margin: 0;
     }
   }
 }
