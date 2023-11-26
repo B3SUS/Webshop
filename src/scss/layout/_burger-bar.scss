@@ -1,4 +1,7 @@
 .mobile-header{
+  top: 0;
+  position: relative;
+  left: 0;
   height: 51px;
   width: 100%;
   background-color: white;
@@ -7,29 +10,35 @@
     display: flex;
     height: 100%;
     .logo-mobile{
-      width: 50%;
+      align-items: center;
+      justify-content: left;
       height: 100%;
+      width: 50%;
+      img{
+        height: 100%;
+      }
     }
     .burger-bar-right-side{
       width: 50%;
       height: 100%;
       display: flex;
       align-items: center;
-      justify-content: center;
+      align-content: center;
+      justify-content: flex-end;
     }
   }
 }
 
 /* Position and sizing of burger button */
 .bm-burger-button {
-  position: fixed;
+  position: relative;
   width: 24px;
   height: 24px;
 }
 
 /* Color/shape of burger icon bars */
 .bm-burger-bars {
-  background: #373a47;
+  background: black;
 }
 
 /* Color/shape of burger icon bars on hover*/
@@ -41,6 +50,8 @@
 .bm-cross-button {
   height: 24px;
   width: 24px;
+  right: 0;
+  top: 0;
 }
 
 /* Color/shape of close button cross */
@@ -55,13 +66,14 @@ Note: Beware of modifying this element as it can break the animations - you shou
 .bm-menu-wrap {
   position: fixed;
   height: 100%;
+  top: 0;
 }
 
 /* General sidebar styles */
 .bm-menu {
-  background: #373a47;
-  padding: 2.5em 1.5em 0;
+  background: white;
   font-size: 1.15em;
+  padding-top: 5em;
 }
 
 /* Morph shape necessary with bubble or elastic */
@@ -71,13 +83,20 @@ Note: Beware of modifying this element as it can break the animations - you shou
 
 /* Wrapper for item list */
 .bm-item-list {
-  color: #b8b7ad;
-  padding: 0.8em;
+  color: #3a3a3a;
+  :nth-last-child(1){
+  border-bottom: 0.1em solid #e2e2e2;
+  }
 }
 
 /* Individual item */
 .bm-item {
+  text-decoration: none;
   display: inline-block;
+  color: black;
+  padding: 25px 25px;
+  border-top: 0.1em solid #e2e2e2;
+  background-color: #f5f7f9;
 }
 
 /* Styling of overlay */

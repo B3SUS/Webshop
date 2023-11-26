@@ -5,6 +5,7 @@ import {ShopContentBrowser} from "../react-components/shop-content-Browser";
 import {ShopContentMobile} from "../react-components/shop-content-mobile";
 import "../scss/main.css";
 import {BrowserView, MobileView} from "react-device-detect";
+import Burger from "../react-components/Burger";
 
 const EverythingPage = () => {
     return (
@@ -14,6 +15,7 @@ const EverythingPage = () => {
                 <ShopContentBrowser/>
             </BrowserView>
             <MobileView>
+                <Burger/>
                 <ShopContentMobile/>
             </MobileView>
             <Footer/>

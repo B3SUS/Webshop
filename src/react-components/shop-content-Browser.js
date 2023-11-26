@@ -1,8 +1,22 @@
 import React from "react";
 import {TopProductBox} from "./TopProductBox";
 import {ProductsContainer} from "./ProductsContainer";
+import {useEffect, useState} from "react";
+import ReactPaginate from 'react-paginate';
+import {Link} from "react-router-dom";
 export const ShopContentBrowser = () => {
-  return(
+    const [items, setItems] = useState([]);
+
+    useEffect(() => {
+        fetch('https://65630cd6ee04015769a6bc93.mockapi.io/name')
+            .then((res)=>{
+                return res.json();})
+            .then(json => {
+                setItems(json)
+            });
+    }, []);
+
+    return(
       <section className="shop-content">
           <section className="secondary">
               <div className="search">
@@ -36,7 +50,7 @@ export const ShopContentBrowser = () => {
           </section>
           <section className="commerce-content">
               <div className="breadcrumb">
-                  <a href="index.html">HomePage</a>
+                  <Link to={"/"}>HomePage</Link>
                   /Store
               </div>
               <div className="commerce-container-header">
@@ -52,7 +66,10 @@ export const ShopContentBrowser = () => {
                       </select>
                   </form>
               </div>
-              <ProductsContainer/>
+              <div className="products-container">
+                  {items.map((obj) =>(
+                      <ProductsContainer key={obj.id} {...obj}/>))}
+              </div>
               <div className="pagination">
                   <ul className="page-nav">
                       <li><a href="">
