@@ -1,20 +1,10 @@
 import React from "react";
 import {TopProductBox} from "./TopProductBox";
-import {ProductsContainer} from "./ProductsContainer";
-import {useEffect, useState} from "react";
-import ReactPaginate from 'react-paginate';
 import {Link} from "react-router-dom";
+import {PaginatedItems} from "./PaginatedItems";
+import "../scss/main.css";
+import {CategoryCountComponent} from "./Categories";
 export const ShopContentBrowser = () => {
-    const [items, setItems] = useState([]);
-
-    useEffect(() => {
-        fetch('https://65630cd6ee04015769a6bc93.mockapi.io/name')
-            .then((res)=>{
-                return res.json();})
-            .then(json => {
-                setItems(json)
-            });
-    }, []);
 
     return(
       <section className="shop-content">
@@ -38,13 +28,7 @@ export const ShopContentBrowser = () => {
               </div>
               <div className="categories">
                   <h3>Categories</h3>
-                  <div className="product-categories">
-                      <ul>
-                          <li><a href="">Accessories</a><span className="count">(7)</span></li>
-                          <li><a href="">Men</a><span className="count">(14)</span></li>
-                          <li><a href="">Women</a><span className="count">(17)</span></li>
-                      </ul>
-                  </div>
+                  <CategoryCountComponent/>
               </div>
               <TopProductBox/>
           </section>
@@ -66,26 +50,7 @@ export const ShopContentBrowser = () => {
                       </select>
                   </form>
               </div>
-              <div className="products-container">
-                  {items.map((obj) =>(
-                      <ProductsContainer key={obj.id} {...obj}/>))}
-              </div>
-              <div className="pagination">
-                  <ul className="page-nav">
-                      <li><a href="">
-                          <button className="normal">1</button>
-                      </a></li>
-                      <li><a href="">
-                          <button className="normal">2</button>
-                      </a></li>
-                      <li><a href="">
-                          <button className="normal">3</button>
-                      </a></li>
-                      <li><a href="">
-                          <button className="normal">→</button>
-                      </a></li>
-                  </ul>
-              </div>
+                <PaginatedItems/>
           </section>
       </section>
   )
