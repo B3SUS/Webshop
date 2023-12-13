@@ -569,19 +569,24 @@
 
 .shop-content .secondary .categories .product-categories li {
   margin-bottom: 0.25em;
-  padding: 2px 0;
+  padding: 5px;
   width: 270px;
   list-style: none;
-}
-
-.shop-content .secondary .categories .product-categories li a {
-  text-decoration: none;
   color: #333333;
-  transition: all 0.2s linear;
+  text-decoration: none;
 }
 
-.shop-content .secondary .categories .product-categories li a:hover {
+.shop-content .secondary .categories .product-categories li:hover {
   color: #0075be;
+  transition: all 0.2s linear;
+  cursor: pointer;
+}
+
+.shop-content .secondary .categories .product-categories li.active {
+  color: #0075be;
+  font-weight: 500;
+  background: white;
+  border-radius: 15px;
 }
 
 .shop-content .secondary .categories .product-categories span {
@@ -683,6 +688,11 @@
 .shop-content .commerce-content .commerce-container-header .ordering .orderby {
   background-color: transparent;
   border: transparent;
+}
+
+.shop-content .commerce-content .commerce-container-header .ordering .orderby span {
+  cursor: pointer;
+  text-decoration: underline dotted;
 }
 
 .shop-content .commerce-content .commerce-container-header .ordering .orderby select {
@@ -1264,6 +1274,53 @@ Note: Beware of modifying this element as it can break the animations - you shou
 /* Styling of overlay */
 .bm-overlay {
   background: rgba(0, 0, 0, 0.3);
+}
+
+.sort {
+  position: relative;
+}
+
+.sort__label {
+  display: flex;
+  align-items: center;
+}
+
+.sort__label b {
+  margin-right: 8px;
+}
+
+.sort__label span {
+  color: gray;
+  border-bottom: 1px dashed gray;
+  cursor: pointer;
+}
+
+.sort__popup {
+  position: absolute;
+  margin-top: 15px;
+  background: #ffffff;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.09);
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 10px 0;
+  width: 160px;
+}
+
+.sort__popup ul {
+  overflow: hidden;
+}
+
+.sort__popup ul li {
+  padding: 12px 20px;
+  cursor: pointer;
+}
+
+.sort__popup ul li.active, .sort__popup ul li:hover {
+  background: rgb(245, 247, 249);
+}
+
+.sort__popup ul li.active {
+  font-weight: bold;
 }
 
 * {

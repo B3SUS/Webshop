@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import '../scss/main.css';
 
-export const CategoryCountComponent = () => {
+export const CategoryCountComponent = ({value, onChangeCategory}) => {
     const categoryNames= {
         1: "Men",
         2: "Women",
@@ -34,7 +34,12 @@ export const CategoryCountComponent = () => {
         <div className="product-categories">
             <ul>
                 {Object.entries(categoriesCount).map(([category, count]) => (
-                    <li key={category}><a href="">{categoryNames[category]}</a><span className="count">({count})</span></li>
+                    <li
+                        key={category}
+                        onClick={() => onChangeCategory(category)}
+                        className={value === category ? 'active' : ''}>
+                        {categoryNames[category]}
+                    <span className="count">({count})</span></li>
                 ))}
             </ul>
         </div>
