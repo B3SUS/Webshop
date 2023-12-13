@@ -35,7 +35,9 @@ const NavbarWhite = () => {
                         <a href="contact.html">Contact us</a>
                     </li>
                     <li>
-                        <button></button>
+                        <Link to={"/cart"}>
+                            <button>Cart</button>
+                        </Link>
                     </li>
                 </ul>
             </div>
