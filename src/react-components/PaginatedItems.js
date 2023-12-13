@@ -1,51 +1,26 @@
-import {ProductsContainer} from "./ProductsContainer";
-import React, {useEffect, useState} from "react";
-import ReactPaginate from "react-paginate";
+import React from "react";
 
+export const PaginatedItems = ({ totalItems, currentPage, itemsPerPage, onChangePage }) => {
+    const pageCount = Math.ceil(totalItems / itemsPerPage);
 
-export const Pagination = ({onChangePage}) =>{
-
-    function Items({currentItems}){
-        return(
-            <div className="products-container">
-                {currentItems.map((obj) =>(
-                    <ProductsContainer key={obj.id} {...obj}/>))}
-            </div>
-        )
+    if (pageCount === 1) {
+        return null;
     }
 
-    useEffect(() => {
-        fetch('https://65630cd6ee04015769a6bc93.mockapi.io/name')
-            .then((res) => res.json())
-            .then((json) => {
-                setItems(json);
-            });
-    }, []);
+    const pages = Array.from({ length: pageCount }, (_, i) => i + 1);
 
-    const [items, setItems] = useState([]);
-    const [itemOffset, setItemOffset] = useState(0);
-    const itemsPerPage = 12;
+    return (
+        <div className="pagination">
+            {pages.map((page) => (
+                <li
 
-    const endOffset = itemOffset + itemsPerPage;
-    const currentItems = items.slice(itemOffset, endOffset);
-    const pageCount = Math.ceil(items.length / itemsPerPage);
-
-    return(
-        <>
-            <ReactPaginate
-                   className="page-nav"
-                   breakLabel="..."
-                   nextLabel="→"
-                   onPageChange={(event) => onChangePage(event.selected +1)}
-                   pageRangeDisplayed={5}
-                   pageCount={pageCount}
-                   previousLabel="←"
-                   pageLinkClassName="page-link"
-                   previousLinkClassName="page-link"
-                   nextLinkClassName="page-link"
-                   activeClassName="active"
-                   renderOnZeroPageCount={null}
-            />
-        </>
-    )
-}
+                    key={page}
+                    className={page === currentPage ? "active" : ""}
+                    onClick={() => onChangePage(page)}
+                >
+                    {page}
+                </li>
+            ))}
+        </div>
+    );
+};
