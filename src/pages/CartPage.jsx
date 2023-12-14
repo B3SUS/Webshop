@@ -41,7 +41,7 @@ export const CartPage = () => {
 
     const handleQuantityChange = (id, e) => {
         const newQuantity = parseInt(e.target.value, 10);
-        if (!isNaN(newQuantity) && newQuantity >= 0) {
+        if (!isNaN(newQuantity) && newQuantity >= 1) {
             updateCartItem(id, newQuantity);
         }
     };

@@ -14,6 +14,11 @@ const EverythingPage = () => {
         const storedCart = localStorage.getItem("cart");
         return storedCart ? JSON.parse(storedCart) : [];
     });
+    const [cartItemCount, setCartItemCount] = useState(() => {
+        const storedCount = localStorage.getItem("cartItemCount");
+        return storedCount ? parseInt(storedCount, 10) : 0;
+    });
+
 
 
     // Зберігаємо кошик в localStorage при зміні
@@ -32,20 +37,27 @@ const EverythingPage = () => {
                 const updatedCart = [...prevCart];
                 updatedCart[existingItemIndex].quantity += 1;
                 localStorage.setItem("cart", JSON.stringify(updatedCart));
+                setCartItemCount((prevCount) => prevCount + 1);
                 return updatedCart;
             } else {
                 const newCart = [...prevCart, { ...item, quantity: 1 }];
                 localStorage.setItem("cart", JSON.stringify(newCart));
+                setCartItemCount((prevCount) => prevCount + 1);
                 return newCart;
             }
         });
     };
 
+    useEffect(() => {
+        localStorage.setItem("cartItemCount", cartItemCount.toString());
+    }, [cartItemCount]);
+
+
 
     return (
         <div style={{ backgroundColor: '#f5f7f9' }}>
             <BrowserView>
-                <NavbarWhite cartItemCount={cart.length} />
+                <NavbarWhite cartItemCount={cartItemCount} />
                 <ShopContentBrowser addToCart={addToCart} cart={cart} setCart={setCart} />
             </BrowserView>
             <MobileView>

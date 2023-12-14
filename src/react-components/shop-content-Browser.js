@@ -14,11 +14,11 @@ export const ShopContentBrowser = ({addToCart, cart: cartProp, setCart: setProp}
     const [currentPage, setCurrentPage] = useState(1);
     const [totalItems, setTotalItems] = useState(31);
     const [cart, setCart] = useState([]);
+    const [cartItemCount, setCartItemCount] = useState(0); // Додайте стан для зберігання кількості товарів в кошику
 
     const order = sortType.sort.includes("-") ? "asc" : "desc";
     const sortBy = sortType.sort.replace("-", "");
     const category = categoryId > 0 ? `category=${categoryId}` : "";
-
 
     const onChangeCategory = (id) => {
         setCategoryId(id);
@@ -50,24 +50,14 @@ export const ShopContentBrowser = ({addToCart, cart: cartProp, setCart: setProp}
 
     const from = currentPage * 12 - 11;
     const to = Math.min(currentPage * 12, totalItems);
-    const handleClick = (product) => {
-        setCart((prevCart) => {
-            const existingItemIndex = prevCart.findIndex(
-                (existingItem) => existingItem.id === product.id
-            );
 
-            if (existingItemIndex !== -1) {
-                const updatedCart = [...prevCart];
-                updatedCart[existingItemIndex].quantity += 1;
-                localStorage.setItem("cart", JSON.stringify(updatedCart));
-                return updatedCart;
-            } else {
-                const newCart = [...prevCart, { ...product, quantity: 1 }];
-                localStorage.setItem("cart", JSON.stringify(newCart));
-                return newCart;
-            }
-        });
+    const handleClick = (product) => {
+        if (addToCart) {
+            addToCart(product);
+            setCartItemCount((prevCount) => prevCount + 1); // Збільшити кількість товарів в кошику
+        }
     };
+
 
 
 
@@ -95,7 +85,7 @@ export const ShopContentBrowser = ({addToCart, cart: cartProp, setCart: setProp}
 
                 <div className="products-container">
                     {items.map((obj) => (
-                        <ProductsContainer key={obj.id} {...obj} addToCart={() => handleClick(obj, cart, setCart)} cart={cart} />
+                        <ProductsContainer key={obj.id} {...obj} addToCart={() => handleClick(obj)} cart={cart} />
                     ))}
                 </div>
 
