@@ -7,16 +7,18 @@ import { CategoryCountComponent } from "./Categories";
 import { Sort } from "./Sort";
 import { ProductsContainer } from "./ProductsContainer";
 
-export const ShopContentBrowser = () => {
+export const ShopContentBrowser = ({addToCart, cart: cartProp, setCart: setProp}) => {
     const [sortType, setSortType] = useState({ name: "default", sort: "default" });
     const [items, setItems] = useState([]);
     const [categoryId, setCategoryId] = useState(null);
     const [currentPage, setCurrentPage] = useState(1);
     const [totalItems, setTotalItems] = useState(31);
+    const [cart, setCart] = useState([]);
 
     const order = sortType.sort.includes("-") ? "asc" : "desc";
     const sortBy = sortType.sort.replace("-", "");
     const category = categoryId > 0 ? `category=${categoryId}` : "";
+
 
     const onChangeCategory = (id) => {
         setCategoryId(id);
@@ -48,17 +50,34 @@ export const ShopContentBrowser = () => {
 
     const from = currentPage * 12 - 11;
     const to = Math.min(currentPage * 12, totalItems);
+    const handleClick = (product) => {
+        setCart((prevCart) => {
+            const existingItemIndex = prevCart.findIndex(
+                (existingItem) => existingItem.id === product.id
+            );
+
+            if (existingItemIndex !== -1) {
+                const updatedCart = [...prevCart];
+                updatedCart[existingItemIndex].quantity += 1;
+                localStorage.setItem("cart", JSON.stringify(updatedCart));
+                return updatedCart;
+            } else {
+                const newCart = [...prevCart, { ...product, quantity: 1 }];
+                localStorage.setItem("cart", JSON.stringify(newCart));
+                return newCart;
+            }
+        });
+    };
+
+
 
     return (
         <section className="shop-content">
             <section className="secondary">
-                {/* ... */}
-
                 <div className="categories">
                     <h3>Categories</h3>
                     <CategoryCountComponent value={categoryId} onChangeCategory={onChangeCategory} />
                 </div>
-
                 <TopProductBox />
             </section>
 
@@ -76,7 +95,7 @@ export const ShopContentBrowser = () => {
 
                 <div className="products-container">
                     {items.map((obj) => (
-                        <ProductsContainer key={obj.id} {...obj} />
+                        <ProductsContainer key={obj.id} {...obj} addToCart={() => handleClick(obj, cart, setCart)} cart={cart} />
                     ))}
                 </div>
 
@@ -85,6 +104,8 @@ export const ShopContentBrowser = () => {
                     currentPage={currentPage}
                     itemsPerPage={12}
                     onChangePage={(number) => setCurrentPage(number)}
+                    cart={cart}
+                    setCart={setCart}
                 />
             </section>
         </section>

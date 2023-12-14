@@ -2,8 +2,18 @@ import React from "react";
 import LogoPng from "../assets/img/logo-black.png";
 import "../scss/main.css";
 import {Link} from "react-router-dom";
+import {RiShoppingBagLine} from "react-icons/ri";
 
-const NavbarWhite = () => {
+
+const CartIcon = ({ cartItemCount }) => {
+    return (
+        <Link to="/cart">
+            <RiShoppingBagLine className={"cartIcon"} />
+            {cartItemCount > 0 && <span className="cart-count">{cartItemCount}</span>}
+        </Link>
+    );
+};
+const NavbarWhite = ({cartItemCount}) => {
 
     return (
         <div>
@@ -35,9 +45,7 @@ const NavbarWhite = () => {
                         <a href="contact.html">Contact us</a>
                     </li>
                     <li>
-                        <Link to={"/cart"}>
-                            <button>Cart</button>
-                        </Link>
+                        <CartIcon cartItemCount={cartItemCount} />
                     </li>
                 </ul>
             </div>
