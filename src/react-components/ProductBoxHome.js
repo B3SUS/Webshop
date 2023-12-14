@@ -5,13 +5,20 @@ import {faStar} from "@fortawesome/free-solid-svg-icons";
 
 
 
-export function TopProductBox({title, ImageUrl, price}) {
-    function TopProducts ({title, ImageUrl, price}) {
+export function ProductBoxHome({title, ImageUrl, price, category}) {
+    const categoryNames= {
+        1: "Men",
+        2: "Women",
+        3: "Accessories",
+    };
+    function HomeProducts ({title, ImageUrl, price}) {
         return(
-            <div className="top-product-box">
+            <div className="product-box">
                 <img src={ImageUrl} alt=""/>
-                <div className="top-product-info">
-                    <a href="">{title}</a>
+                <div className="desc">
+                    <h5>{title}</h5>
+                    <h6 className="gray-text">{categoryNames[category]}</h6>
+                    <h6>${price}</h6>
                     <div className="star">
                         <FontAwesomeIcon icon={faStar} />
                         <FontAwesomeIcon icon={faStar} />
@@ -19,7 +26,6 @@ export function TopProductBox({title, ImageUrl, price}) {
                         <FontAwesomeIcon icon={faStar} />
                         <FontAwesomeIcon icon={faStar} />
                     </div>
-                    <h5>${price}</h5>
                 </div>
             </div>
         )
@@ -31,19 +37,14 @@ export function TopProductBox({title, ImageUrl, price}) {
         )
             .then((res) => res.json())
             .then((json) => {
-                setItems(json.slice(0, 5));
+                setItems(json.slice(0, 10));
             });
     }, []);
     return(
-        <div className="top-rated-products">
-            <h3>Our Best Sellers</h3>
-            <ul>
-                <li>
-                    {items.map((obj) => (
-                        <TopProducts key={obj.id} {...obj}/>
-                    ))}
-                </li>
-            </ul>
-        </div>
+        <section className="products-container">
+            {items.map((obj) => (
+                <HomeProducts key={obj.id} {...obj}/>
+            ))}
+        </section>
     )
 }

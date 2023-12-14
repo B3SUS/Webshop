@@ -1,216 +1,33 @@
 import React from "react";
-import SportShoe3 from "../assets/img/sports-shoe3.jpg";
 import "../scss/main.css";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {faStar} from "@fortawesome/free-solid-svg-icons";
+import { RiShoppingBagLine } from "react-icons/ri";
 
-export function ProductsContainer() {
-    return(
-        <div className="products-container">
-            <ul className="product-columns">
-                <li>
-                    <div className="product-box">
-                        <img src={SportShoe3} alt=""/>
-                        <div className="desc">
-                            <h5>DNK Yellow Shoes</h5>
-                            <h6 className="gray-text">Men</h6>
-                            <h6>$120</h6>
-                            <div className="star">
-                                <i className='bx bxs-star'></i>
-                                <i className='bx bxs-star'></i>
-                                <i className='bx bxs-star'></i>
-                                <i className='bx bxs-star'></i>
-                                <i className='bx bxs-star'></i>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div className="product-box">
-                        <img src={SportShoe3} alt=""/>
-                        <div className="desc">
-                            <h5>DNK Yellow Shoes</h5>
-                            <h6 className="gray-text">Men</h6>
-                            <h6>$120</h6>
-                            <div className="star">
-                                <i className='bx bxs-star'></i>
-                                <i className='bx bxs-star'></i>
-                                <i className='bx bxs-star'></i>
-                                <i className='bx bxs-star'></i>
-                                <i className='bx bxs-star'></i>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div className="product-box">
-                        <img src={SportShoe3} alt=""/>
-                        <div className="desc">
-                            <h5>DNK Yellow Shoes</h5>
-                            <h6 className="gray-text">Men</h6>
-                            <h6>$120</h6>
-                            <div className="star">
-                                <i className='bx bxs-star'></i>
-                                <i className='bx bxs-star'></i>
-                                <i className='bx bxs-star'></i>
-                                <i className='bx bxs-star'></i>
-                                <i className='bx bxs-star'></i>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div className="product-box">
-                        <img src={SportShoe3} alt=""/>
-                        <div className="desc">
-                            <h5>DNK Yellow Shoes</h5>
-                            <h6 className="gray-text">Men</h6>
-                            <h6>$120</h6>
-                            <div className="star">
-                                <i className='bx bxs-star'></i>
-                                <i className='bx bxs-star'></i>
-                                <i className='bx bxs-star'></i>
-                                <i className='bx bxs-star'></i>
-                                <i className='bx bxs-star'></i>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div className="product-box">
-                        <img src={SportShoe3} alt=""/>
-                        <div className="desc">
-                            <h5>DNK Yellow Shoes</h5>
-                            <h6 className="gray-text">Men</h6>
-                            <h6>$120</h6>
-                            <div className="star">
-                                <i className='bx bxs-star'></i>
-                                <i className='bx bxs-star'></i>
-                                <i className='bx bxs-star'></i>
-                                <i className='bx bxs-star'></i>
-                                <i className='bx bxs-star'></i>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div className="product-box">
-                        <img src={SportShoe3} alt=""/>
-                        <div className="desc">
-                            <h5>DNK Yellow Shoes</h5>
-                            <h6 className="gray-text">Men</h6>
-                            <h6>$120</h6>
-                            <div className="star">
-                                <i className='bx bxs-star'></i>
-                                <i className='bx bxs-star'></i>
-                                <i className='bx bxs-star'></i>
-                                <i className='bx bxs-star'></i>
-                                <i className='bx bxs-star'></i>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div className="product-box">
-                        <img src={SportShoe3} alt=""/>
-                        <div className="desc">
-                            <h5>DNK Yellow Shoes</h5>
-                            <h6 className="gray-text">Men</h6>
-                            <h6>$120</h6>
-                            <div className="star">
-                                <i className='bx bxs-star'></i>
-                                <i className='bx bxs-star'></i>
-                                <i className='bx bxs-star'></i>
-                                <i className='bx bxs-star'></i>
-                                <i className='bx bxs-star'></i>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div className="product-box">
-                        <img src={SportShoe3} alt=""/>
-                        <div className="desc">
-                            <h5>DNK Yellow Shoes</h5>
-                            <h6 className="gray-text">Men</h6>
-                            <h6>$120</h6>
-                            <div className="star">
-                                <i className='bx bxs-star'></i>
-                                <i className='bx bxs-star'></i>
-                                <i className='bx bxs-star'></i>
-                                <i className='bx bxs-star'></i>
-                                <i className='bx bxs-star'></i>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div className="product-box">
-                        <img src={SportShoe3} alt=""/>
-                        <div className="desc">
-                            <h5>DNK Yellow Shoes</h5>
-                            <h6 className="gray-text">Men</h6>
-                            <h6>$120</h6>
-                            <div className="star">
-                                <i className='bx bxs-star'></i>
-                                <i className='bx bxs-star'></i>
-                                <i className='bx bxs-star'></i>
-                                <i className='bx bxs-star'></i>
-                                <i className='bx bxs-star'></i>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div className="product-box">
-                        <img src={SportShoe3} alt=""/>
-                        <div className="desc">
-                            <h5>DNK Yellow Shoes</h5>
-                            <h6 className="gray-text">Men</h6>
-                            <h6>$120</h6>
-                            <div className="star">
-                                <i className='bx bxs-star'></i>
-                                <i className='bx bxs-star'></i>
-                                <i className='bx bxs-star'></i>
-                                <i className='bx bxs-star'></i>
-                                <i className='bx bxs-star'></i>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div className="product-box">
-                        <img src={SportShoe3} alt=""/>
-                        <div className="desc">
-                            <h5>DNK Yellow Shoes</h5>
-                            <h6 className="gray-text">Men</h6>
-                            <h6>$120</h6>
-                            <div className="star">
-                                <i className='bx bxs-star'></i>
-                                <i className='bx bxs-star'></i>
-                                <i className='bx bxs-star'></i>
-                                <i className='bx bxs-star'></i>
-                                <i className='bx bxs-star'></i>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div className="product-box">
-                        <img src={SportShoe3} alt=""/>
-                        <div className="desc">
-                            <h5>DNK Yellow Shoes</h5>
-                            <h6 className="gray-text">Men</h6>
-                            <h6>$120</h6>
-                            <div className="star">
-                                <i className='bx bxs-star'></i>
-                                <i className='bx bxs-star'></i>
-                                <i className='bx bxs-star'></i>
-                                <i className='bx bxs-star'></i>
-                                <i className='bx bxs-star'></i>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-            </ul>
+export function ProductsContainer({ title, ImageUrl, price, category, addToCart }) {
+    const categoryNames = {
+        1: "Men",
+        2: "Women",
+        3: "Accessories",
+    };
+
+    return (
+        <div className="product-box">
+            <RiShoppingBagLine className={"cartIcon"} onClick={() => addToCart({ id: title, ImageUrl, price, category })} />
+            <img src={ImageUrl} alt="" />
+            <div className="desc">
+                <h5>{title}</h5>
+                <h6 className="gray-text">{categoryNames[category]}</h6>
+                <h6>${price}</h6>
+                <div className="star">
+                    <FontAwesomeIcon icon={faStar} className={"star"} />
+                    <FontAwesomeIcon icon={faStar} className={"star"} />
+                    <FontAwesomeIcon icon={faStar} className={"star"} />
+                    <FontAwesomeIcon icon={faStar} className={"star"} />
+                    <FontAwesomeIcon icon={faStar} className={"star"} />
+                </div>
+            </div>
         </div>
-    )
+    );
 }
+

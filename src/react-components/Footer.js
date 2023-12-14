@@ -3,13 +3,14 @@ import "../scss/main.css";
 import FooterLogo from "../assets/img/logo@2x-free-img-120x40.png";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faFacebookF, faGoogle, faInstagram, faTwitter, faYoutube} from "@fortawesome/free-brands-svg-icons";
+import {Link} from "react-router-dom";
 export const Footer = () => {
     return (
         <div>
             <section className="footer">
                 <div className="saleup">
-                    <a href="everything.html"><h3>SALE UP TO 70% OFF FOR ALL CLOTHES & FASHION ITEMS, ON ALL
-                        BRANDS.</h3></a>
+                    <Link to={"/everything"}><h3>SALE UP TO 70% OFF FOR ALL CLOTHES & FASHION ITEMS, ON ALL
+                        BRANDS.</h3></Link>
                 </div>
                 <div className="primary-footer">
                     <div className="logo-footer">
